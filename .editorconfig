@@ -1,0 +1,13 @@
+# Global settings
+[*]
+end_of_line = lf
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# You can also define specific settings depending of the extension
+# for example if we want to override xml formatting
+[*.{xml}]
+indent_style = tab
+indent_size = 4
