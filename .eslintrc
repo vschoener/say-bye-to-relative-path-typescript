@@ -1,49 +1,52 @@
 {
-    "root": true,
-    "env": {
-      "node": true
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts"]
     },
-    "extends": [
-      "plugin:@typescript-eslint/recommended",
-      "prettier/@typescript-eslint",
-      "plugin:prettier/recommended",
-      "plugin:import/errors",
-      "plugin:import/warnings",
-      "plugin:import/typescript"
-    ],
-    "settings": {
-      "import/parsers": {
-        "@typescript-eslint/parser": [".ts"]
-      }
-    },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "project": "./tsconfig.json",
-      "tsconfigRootDir": "./"
-    },
-    "plugins": ["@typescript-eslint", "import"],
-    "rules": {
-      "prettier/prettier": ["error"],
-      "@typescript-eslint/no-explicit-any": 2,
-      "@typescript-eslint/no-unused-vars": 2,
-      "@typescript-eslint/explicit-function-return-type": "off",
-      "@typescript-eslint/explicit-member-accessibility": ["error"],
-      "@typescript-eslint/member-ordering": ["error"],
-      "@typescript-eslint/interface-name": ["off"],
-      "@typescript-eslint/arrow-parens": ["off"],
-      "@typescript-eslint/object-literal-sort-keys": ["off"],
-      "import/no-unresolved": "error",
-      "import/named": 2,
-      "import/namespace": 2,
-      "import/order": [
-        "error",
-        {
-          "newlines-between": "always",
-          "groups": [
-            ["builtin", "external"],
-            ["internal", "parent", "sibling", "index"]
-          ]
-        }
-      ]
+    "import/resolver": {
+      "typescript": {}
     }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./"
+  },
+  "plugins": ["@typescript-eslint", "import"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "@typescript-eslint/no-explicit-any": 2,
+    "@typescript-eslint/no-unused-vars": 2,
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": ["error"],
+    "@typescript-eslint/member-ordering": ["error"],
+    "@typescript-eslint/interface-name": ["off"],
+    "@typescript-eslint/arrow-parens": ["off"],
+    "@typescript-eslint/object-literal-sort-keys": ["off"],
+    "import/no-unresolved": "error",
+    "import/named": 2,
+    "import/namespace": 2,
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "groups": [
+          ["builtin", "external"],
+          ["internal", "parent", "sibling", "index"]
+        ]
+      }
+    ]
   }
+}

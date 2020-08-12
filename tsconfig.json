@@ -1,18 +1,26 @@
 {
-    "compilerOptions": {
-      "module": "commonjs",
-      "declaration": true,
-      "removeComments": true,
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "allowSyntheticDefaultImports": true,
-      "esModuleInterop": true,
-      "target": "es2019",
-      "sourceMap": true,
-      "lib": ["esnext", "dom"],
-      "outDir": "./dist",
-      "baseUrl": "./",
-      "incremental": true
-    },
-    "exclude": ["node_modules", "dist"]
-  }
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "target": "es2019",
+    "sourceMap": true,
+    "lib": ["esnext", "dom"],
+    "outDir": "dist",
+    "baseUrl": "./",
+    "incremental": true,
+    // Change this paths keys
+    "paths": {
+      "@src/*": ["src/*"],
+      // Just as an example of what you can
+      "@services/*": ["src/services/*"],
+      // Or even cooler
+      "@/*": ["src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
